@@ -9,8 +9,9 @@ import { filter, takeUntil } from 'rxjs/operators';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'Calenderly';
+  title = 'Angular App';
   isIframe = false;
   loginDisplay = false;
   private readonly _destroying$ = new Subject<void>();

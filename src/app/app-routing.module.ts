@@ -3,12 +3,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserUtils } from '@azure/msal-browser';
 
 import { HomeComponent } from './components/home/home.component';
+import { MeetComponent } from './components/meet/meet.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { MsalGuard } from '@azure/msal-angular';
 const routes: Routes = [
   {
     path: 'profile',
     component: ProfileComponent,
+    canActivate: [MsalGuard]
+  },
+  {
+    path: 'meet',
+    component: MeetComponent,
     canActivate: [MsalGuard]
   },
   {

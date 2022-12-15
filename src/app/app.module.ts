@@ -9,21 +9,28 @@ import { ProfileComponent } from './components/profile/profile.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
 import { MsalModule, MsalRedirectComponent, MsalGuard, MsalInterceptor } from '@azure/msal-angular';
 import { PublicClientApplication, InteractionType } from '@azure/msal-browser';
+import { MeetComponent } from './components/meet/meet.component';
 
 const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigator.userAgent.indexOf('Trident/') > -1;
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    MeetComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     MatToolbarModule,
     MatButtonModule,
+    MatCardModule,
+    MatListModule,
     MsalModule.forRoot( new PublicClientApplication({
       auth: {
         clientId: '344083b8-647d-4982-9c15-489bbcb0e50c', // Application (client) ID from the app registration

@@ -1,8 +1,21 @@
 <div *ngIf="!loginDisplay">
-    <p>Please sign-in to see your profile information.</p>
+    <mat-card class="title-card">
+        <div class="center">
+            <h1 class="center" style="color: blue;">
+                Welcome to Angular app
+            </h1>
+            <p class="center">Please Login to get your microsoft active directory profile!</p>
+        </div>
+    </mat-card>
 </div>
 
 <div *ngIf="loginDisplay">
-    <p>Login successful!</p>
-    <p>Welcome to calenderly.</p>
+    <mat-card class="title-card">
+        <div class="center">
+            <h1 class="center" style="color: blue;">
+                Welcome to Angular app
+            </h1>
+            <p class="center">Login successful!</p>
+        </div>
+    </mat-card>
 </div>
